@@ -10,4 +10,6 @@ class Game < ApplicationRecord
   belongs_to :parent_game, class_name: 'Game', optional: true
 
   has_many :reviews, as: :reviewable
+
+  enum category: { main_game: 0, expansion: 1 }
 end
